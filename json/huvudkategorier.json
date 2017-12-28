@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "mainCat": "Böcker"
+    },{
+        "id": 2,
+        "mainCat": "Katter"
+    },{
+        "id": 3,
+        "mainCat": "Garn"
+    },{
+        "id": 4,
+        "mainCat": "Öl"
+    }
+]
