@@ -1,76 +1,68 @@
 [
     {
         "id": 1,
-        "stadname": "El Gitarr",
+        "subCat": "Kokböcker",
         "huvudkategori": 1
         
     },{
         "id": 2,
-        "stadname": "El Bas",
-        "huvudkategori": 2
+        "subCat": "Kattböcker",
+        "huvudkategori": 1
     },{
         "id": 3,
-        "stadname": "Tillbehör",
+        "subCat": "Trädgård",
         "huvudkategori": 1
     },{
         "id": 4,
-        "stadname": "Piano",
-        "huvudkategori": 3
+        "subCat": "Barnböcker",
+        "huvudkategori": 1
     },{
         "id": 5,
-        "stadname": "Synth",
-        "huvudkategori": 3
+        "subCat": "Cornish Rex",
+        "huvudkategori": 2
     },{
         "id": 6,
-        "stadname": "Klassisk Gitarr",
-        "huvudkategori": 1
+        "subCat": "Sphynx",
+        "huvudkategori": 2
     },{
         "id": 7,
-        "stadname": "Strängar",
-        "huvudkategori": 1
+        "subCat": "Grå katt",
+        "huvudkategori": 2
     },{
         "id": 8,
-        "stadname": "Akustisk Bas",
+        "subCat": "Rum-Tum-Tum",
         "huvudkategori": 2
     },{
         "id": 9,
-        "stadname": "Dragspel",
+        "subCat": "Ull",
         "huvudkategori": 3
     },{
         "id": 10,
-        "stadname": "Förstärkare",
-        "huvudkategori": 1
+        "subCat": "Bomull",
+        "huvudkategori": 3
     },{
         "id": 11,
-        "stadname": "USB Keyboard",
+        "subCat": "Något",
         "huvudkategori": 3
     },{
         "id": 12,
-        "stadname": "Strängar",
-        "huvudkategori": 2
+        "subCat": "Annat",
+        "huvudkategori": 3
     },{
         "id": 13,
-        "stadname": "Förstärkare",
-        "huvudkategori": 2
+        "subCat": "Lager",
+        "huvudkategori": 4
     },{
         "id": 14,
-        "stadname": "Begagnat",
-        "huvudkategori": 1
-    },{
-        "id": 15,
-        "stadname": "Tillbehör",
-        "huvudkategori": 2
-    },{
-        "id": 15,
-        "stadname": "Trumsett",
+        "subCat": "Pripps",
         "huvudkategori": 4
     },{
         "id": 15,
-        "stadname": "Digitaltrummor",
+        "subCat": "Paulaner",
         "huvudkategori": 4
     },{
-        "id": 15,
-        "stadname": "Slagverk",
+        "id": 16,
+        "subCat": "Julöl",
         "huvudkategori": 4
     }
 ]
