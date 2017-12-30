@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dropdowns 1: Basic, single level</title>
+	<style>
+		body {
+			font: 15px arial, helvetica, sans-serif;
+			background: #333;
+			color: #fff;
+		}
+	
+		a {
+			color: #06c;
+		}
+	
+		ul { /* all lists... */
+			padding: 0;
+			margin: 0;
+			background: #fff;
+		}
+	
+		li { /* all list items... */
+			display: inline; /* set the list items left-to-right */
+			position: relative; /* set the origin for child boxes to be positioned from */
+		}
+
+		ul ul { /* lists within lists... */
+			position: absolute; /* place them over the top of everything */
+			left: 0; /* align them to the left of the parent list item  - necessary for some older browsers */
+			top: 100%; /* align them to the bottom of the parent list item - again only necessary for older browsers */
+			display: none; /* hide 'em */
+		}
+	
+		li:hover ul { /* when list items are hovered over, do this to lists contained within them... */
+			display: block; /* show 'em */
+		}
+	</style>
+</head>
+
+<body>
+	<ul>
+		<li>
+			<a href="">Birds</a>
+			<ul>
+				<li><a href="">Ratites</a></li>
+				<li><a href="">Fowl</a></li>
+				<li><a href="">Neoaves</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="">Mammals</a>
+			<ul>
+				<li><a href="">Monotremes</a></li>
+				<li><a href="">Marsupials</a></li>
+				<li><a href="">Placentals</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="">Reptiles</a>
+			<ul>
+				<li><a href="">Lizards and snakes</a></li>
+				<li><a href="">Tortoises and turtles</a></li>
+				<li><a href="">Crocodilians</a></li>
+				<li><a href="">Tuatara</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="">Amphibians</a>
+			<ul>
+				<li><a href="">Frogs and toads</a></li>
+				<li><a href="">Salamanders and newts</a></li>
+				<li><a href="">Caecilians</a></li>
+			</ul>
+		</li>
+	</ul>
+
+	
+	
+</body>
+</html>

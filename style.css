@@ -18,6 +18,7 @@ a {
   }
 
 a:hover {
+    text-decoration: underline;
     color: #6633ff;
   }
 
@@ -28,6 +29,8 @@ a:hover {
     padding: 10px;
     position: fixed;
     text-align: center;
+    /* text-decoration: none;
+    color: grey; */
   }
 
 .nav {
@@ -37,55 +40,61 @@ a:hover {
     list-style-type: none;
     margin: 0 auto;
     padding: 0;
+    border: solid pink 1px;
+    text-decoration: none;
+    color: grey;
   }
 
+  
+/*huvudkategorierna från js-script*/
+.mainCat {
+  border: solid white 1px;
+}
+
+.subCatString {
+  display: none;
+  border: solid white 2px;
+}
+ 
 .nav .name {
     display: none;
   } 
-
-  .nav li {
+ 
+.nav li {
     padding: 5px 10px 10px 10px;
   }
 
-  .nav a {
-    transition: all .5s;
-  } 
-  .nav a:hover {
+.nav li:hover ul {
+  display: block;
+  
+}
+
+ul {
+  list-style-type: none;
+  
+}
+
+/*för listor i listor i nav*/
+.nav ul ul {
+  position: absolute;
+  background-color: black;
+  text-align: left;
+  list-style-type: none; 
+}
+.nav a:hover {
       color: grey;
   }
-  header {
+
+header {
     text-align: center;
     background: url('images/seamless-hipster.jpg') no-repeat top center ;
     background-size: cover;
     overflow: hidden;
     padding-top: 60px;
-    
-  }
-
-  header {
     line-height: 1.5;
   }
 
-  header .profile-image {
-    margin-top: 50px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid white;
-    transition: all .5s;
-  }
-
-  /* .tag {
-    background-color: #e2e2e2;
-    color: black;
-    padding: 10px;
-    border-radius: 5px;
-    display: table;
-    margin: 10px auto;
-    padding-top: 20px;
-  } */
-
-  .card {
+.card {
     margin: 30px;
     padding: 20px 40px 40px;
     max-width: 500px;
@@ -103,12 +112,7 @@ a:hover {
     border-color: black;
   }
 
-  ul.skills {
-    padding: 0;
-    text-align: center;
-  }
-
-  
+    
   footer {
     width: 100%;
     min-height: 30px;

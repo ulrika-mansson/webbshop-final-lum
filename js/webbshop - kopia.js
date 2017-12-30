@@ -21,7 +21,7 @@ $(document).ready(function() {
         /*$(".mainCategory").text(mainCategories[i].mainCat);*/
         //nedan: lade huvudkategorierna i ett kort 
         /* var mainCategoryString = "<div class='card'><h2 class='mainCategory'>" +  mainCategories[i].mainCat + "</h2><ul id='" + mainCategories[i].id + "'></div>"; */
-         var mainCategoryString = "<ul><li>" + mainCategories[i].mainCat + "<ul class='subCatString' id='" + mainCategories[i].id + "'></ul></li>";
+         var mainCategoryString = "<li class='mainCat' id='" + mainCategories[i].id + "'>" + mainCategories[i].mainCat + "</li>";
 
         console.log(mainCategoryString);
         /* $(".flex").append(mainCategoryString); */
@@ -32,7 +32,7 @@ $(document).ready(function() {
         
     });
 
-    fetch("json/underkategorier.json")
+/*     fetch("json/underkategorier.json")
     .then(function(response) {
         return response.json();
     })
@@ -50,6 +50,6 @@ $(document).ready(function() {
         $("#" + subCategories[i].huvudkategori).append("<li>" + subCategories[i].subCat + "</li>"); 
         }
     });
-   
+ */    
     
 });
