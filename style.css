@@ -45,7 +45,14 @@ a:hover {
     color: grey;
   }
 
-  
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
 /*huvudkategorierna från js-script*/
 .mainCat {
   border: solid white 1px;
@@ -62,6 +69,7 @@ a:hover {
  
 .nav li {
     padding: 5px 10px 10px 10px;
+    border: 1px solid greenyellow;
   }
 
 .nav li:hover ul {
@@ -75,7 +83,7 @@ ul {
 }
 
 /*för listor i listor i nav*/
-.nav ul ul {
+.nav li ul {
   position: absolute;
   background-color: black;
   padding-left: 0;
@@ -158,6 +166,11 @@ header {
 
   .nav .name {
     display: block;
+    margin-right: auto;
+    color: white;
+  }
+  
+  .showMainCat {
     margin-right: auto;
     color: white;
   }

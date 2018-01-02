@@ -2,7 +2,7 @@ $(document).ready(function() {
     console.log("fungerar?");
         
     
-    //printa ut huvudkategorier i kort på startsidan
+    //printa ut huvudkategorier i menyer
     fetch("json/huvudkategorier.json")
     .then(function(response) {
         return response.json();
@@ -21,18 +21,19 @@ $(document).ready(function() {
         /*$(".mainCategory").text(mainCategories[i].mainCat);*/
         //nedan: lade huvudkategorierna i ett kort 
         /* var mainCategoryString = "<div class='card'><h2 class='mainCategory'>" +  mainCategories[i].mainCat + "</h2><ul id='" + mainCategories[i].id + "'></div>"; */
-         var mainCategoryString = "<ul><li>" + mainCategories[i].mainCat + "<ul class='subCatString' id='" + mainCategories[i].id + "'></ul></li>";
+         var mainCategoryString = "<li class='showMainCat'><a href='#'>" + mainCategories[i].mainCat + "</a><ul class='subCatString' id='" + mainCategories[i].id + "'></ul></li>";
 
         console.log(mainCategoryString);
         /* $(".flex").append(mainCategoryString); */
-        $(".nav").append(mainCategoryString);
+        /* $(".nav").append(mainCategoryString); */
+        $("#navShowMainCat").append(mainCategoryString);
     }
     
 
         
     });
 
-    fetch("json/underkategorier.json")
+     fetch("json/underkategorier.json")
     .then(function(response) {
         return response.json();
     })
@@ -46,10 +47,22 @@ $(document).ready(function() {
         //console.log("id: " + subCategories[i].id);
         //console.log("subCat: " + subCategories[i].subCat);
         //console.log("huvudkategori: " + subCategories[i].huvudkategori);
-        
-        $("#" + subCategories[i].huvudkategori).append("<li>" + subCategories[i].subCat + "</li>"); 
+            var li = document.createElement('li');
+            li.className = 'showSubCat';
+            li.innerHTML = '<a href="#">' + subCategories[i].subCat + '</a>';
+
+            $("#" + subCategories[i].huvudkategori).append(li); 
+            li.onclick = showSubCat;
         }
     });
    
-    
+
+    //funktion för att printa ut kort med underkategorier
+    function showSubCat() {
+        alert($(this).text());
+        //alert("test " + $(this).parents(".showMainCat").firstChild.nodeValue);
+        //alert($(".showSubCat").index($(this).text()));
+    }
+
+
 });

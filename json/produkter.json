@@ -1,10 +1,146 @@
 [
     {
         "id": 1,
-        "prodName": "Epiphone Les Paul Standard",
-        "prodDesc": "Elgitarr med kropp av mahogny och AAA-flammigt lönntopp, mahognyhals med greppbräda av rosewood och två ProBucker pickups.",
+        "prodName": "Böcker Kokbok Namn",
+        "prodDesc": "Böcker Kokbok Beskrivning.",
         "prodPrice": 6999,
-        "huvudKat": 1,
-        "underKat": 1
+        "mainCat": 1,
+        "subKat": 1
+    },
+    {
+        "id": 2,
+        "prodName": "Böcker Kattbok Namn",
+        "prodDesc": "Böcker Kattbok Beskrivning.",
+        "prodPrice": 6999,
+        "mainCat": 1,
+        "subKat": 2
+    },{
+        "id": 3,
+        "prodName": "Böcker Trädgård Namn",
+        "prodDesc": "Böcker Trädgård Beskrivning.",
+        "prodPrice": 6999,
+        "mainCat": 1,
+        "subKat": 3
+    },
+    {
+        "id": 4,
+        "prodName": "Böcker Barnbok Namn",
+        "prodDesc": "Böcker Barnbok Beskrivning.",
+        "prodPrice": 6999,
+        "mainCat": 1,
+        "subKat": 4
+    },
+    {
+        "id": 5,
+        "prodName": "Katter Cornish Namn",
+        "prodDesc": "Katter Cornish Beskrivning.",
+        "prodPrice": 6999,
+        "mainCat": 2,
+        "subKat": 1
+    },
+    {
+        "id": 6,
+        "prodName": "Katter Sphynx Namn",
+        "prodDesc": "Katter Sphynx Beskrivning.",
+        "prodPrice": 6999,
+        "mainCat": 2,
+        "subKat": 2
+    },
+    {
+        "id": 7,
+        "prodName": "Katter Grå Namn",
+        "prodDesc": "Katter Grå Beskrivning.",
+        "prodPrice": 6999,
+        "mainCat": 2,
+        "subKat": 3
+    },
+    {
+        "id": 8,
+        "prodName": "Katter Rum-Tum Namn",
+        "prodDesc": "Katter Rum-Tum Beskrivning.",
+        "prodPrice": 6999,
+        "mainCat": 2,
+        "subKat": 4
+    },
+    {
+        "id": 9,
+        "prodName": "Garn Ull Namn",
+        "prodDesc": "Garn Ull Beskrivning.",
+        "prodPrice": 6999,
+        "mainCat": 3,
+        "subKat": 1
+    },
+    {
+        "id": 10,
+        "prodName": "Garn Bomull Namn",
+        "prodDesc": "Garn Bomul Beskrivning.",
+        "prodPrice": 6999,
+        "mainCat": 3,
+        "subKat": 2
+    },
+    {
+        "id": 11,
+        "prodName": "Garn Något Namn",
+        "prodDesc": "Garn Något Beskrivning.",
+        "prodPrice": 6999,
+        "mainCat": 3,
+        "subKat": 4
+    },
+    {
+        "id": 12,
+        "prodName": "Öl Lager Namn",
+        "prodDesc": "Öl Lager Beskrivning.",
+        "prodPrice": 6999,
+        "mainCat": 4,
+        "subKat": 1
+    },
+    {
+        "id": 13,
+        "prodName": "Öl Pripps Namn",
+        "prodDesc": "Öl Pripps Beskrivning.",
+        "prodPrice": 6999,
+        "mainCat": 4,
+        "subKat": 2
+    },
+    {
+        "id": 14,
+        "prodName": "Öl Paulaner Namn",
+        "prodDesc": "Öl Paulaner Beskrivning.",
+        "prodPrice": 6999,
+        "mainCat": 4,
+        "subKat": 3
+    },
+    {
+        "id": 15,
+        "prodName": "Öl Julöl Namn",
+        "prodDesc": "Öl Julöl Beskrivning.",
+        "prodPrice": 6999,
+        "mainCat": 4,
+        "subKat": 4
+    },
+    {
+        "id": 16,
+        "prodName": "Katter Cornish Namn",
+        "prodDesc": "Katter Cornisk Beskrivning.",
+        "prodPrice": 6999,
+        "mainCat": 2,
+        "subKat": 1
+    },
+    {
+        "id": 17,
+        "prodName": "Katter Cornish Namn",
+        "prodDesc": "Katter Cornish Beskrivning.",
+        "prodPrice": 6999,
+        "mainCat": 2,
+        "subKat": 1
+    },
+    {
+        "id": 18,
+        "prodName": "Katter Cornish Namn",
+        "prodDesc": "Katter Cornish Beskrivning.",
+        "prodPrice": 6999,
+        "mainCat": 2,
+        "subKat": 1
     }
+
 ]
