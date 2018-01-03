@@ -64,7 +64,8 @@ $(document).ready(function() {
         //alert($(".showSubCat").index($(this).text()));
     }
 
-    //printa ut produkter på startsidan
+
+    //printa ut kort produkter på startsidan
     fetch("json/produkter.json")
     .then(function(response) {
         return response.json();
@@ -77,7 +78,7 @@ $(document).ready(function() {
        for (i = 0; i < products.length; i++) {
         console.log("fungerar här med?");
         
-        var productCard = "<div class='card'><img class='imgSmall' src='images/" + products[i].prodImage + "'><h3>" + products[i].prodName + "</h3><h3>" + products[i].prodDesc + "</h3><p>Pris: " + products[i].prodPrice + "</p><button>Köp nu</button></div>";
+        var productCard = "<div class='card'><img class='imgSmall' src='images/" + products[i].prodImage + "'><h3>" + products[i].prodName + "</h3><h4>" + products[i].prodDesc + "</h4><p>Pris: " + products[i].prodPrice + "</p><button class='button'>Köp nu</button></div>";
 
         /*$(".mainCategory").text(mainCategories[i].mainCat);*/
         //nedan: lade huvudkategorierna i ett kort 
