@@ -50,7 +50,7 @@ $(document).ready(function() {
             var li = document.createElement('li');
             li.className = 'showSubCat';
             li.innerHTML = '<a href="#">' + subCategories[i].subCat + '</a>';
-
+            li.id = subCategories[i].huvudkategori + "_" + subCategories[i].id; 
             $("#" + subCategories[i].huvudkategori).append(li); 
             li.onclick = showSubCat;
         }
@@ -59,13 +59,24 @@ $(document).ready(function() {
 
     //funktion för att printa ut kort med underkategorier när man klickar på undermeny
     function showSubCat() {
-        alert($(this).text());
-        //alert("test " + $(this).parents(".showMainCat").firstChild.nodeValue);
+        var mainSub = ($(this).attr("id")).split("_");
+        printProducts(mainSub[0], mainSub[1]);
+        //alert(mainSub[0]);
+        //alert($(this).attr("id"));
         //alert($(".showSubCat").index($(this).text()));
     }
 
+        //skriver ut alla produkter
+        printProducts(0, 0);
+        
+        //alert($(".card").length); 
 
     //printa ut kort produkter på startsidan
+    function printProducts(main, sub) {
+        //töm div
+        alert(main);
+        alert(sub);
+
     fetch("json/produkter.json")
     .then(function(response) {
         return response.json();
@@ -78,17 +89,17 @@ $(document).ready(function() {
        for (i = 0; i < products.length; i++) {
         console.log("fungerar här med?");
         
-        var productCard = "<div class='card'><img class='imgSmall' src='images/" + products[i].prodImage + "'><h3>" + products[i].prodName + "</h3><h4>" + products[i].prodDesc + "</h4><p>Pris: " + products[i].prodPrice + "</p><button class='button'>Köp nu</button></div>";
+        if (products[i].mainCat == main && products[i].subKat == sub) {
 
-        /*$(".mainCategory").text(mainCategories[i].mainCat);*/
-        //nedan: lade huvudkategorierna i ett kort 
-        /* var mainCategoryString = "<div class='card'><h2 class='mainCategory'>" +  mainCategories[i].mainCat + "</h2><ul id='" + mainCategories[i].id + "'></div>"; */
-        /* $(".flex").append(mainCategoryString); */
-        /* $(".nav").append(mainCategoryString); */
-
-        $(".flex").append(productCard);
+                 
+        var div = document.createElement('div');
+            div.className = 'card';
+            div.innerHTML = '<img class="imgSmall" src="images/' + products[i].prodImage + '"><h3>' + products[i].prodName + '</h3><h4>' + products[i].prodDesc + '</h4><p>Pris: ' + products[i].prodPrice + '</p><button class="button">Köp nu</button>';
+            
+             $(".flex").append(div);
+    };
        } 
     });
-    
+}
 
 });
