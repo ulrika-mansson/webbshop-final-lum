@@ -57,12 +57,37 @@ $(document).ready(function() {
     });
    
 
-    //funktion för att printa ut kort med underkategorier
+    //funktion för att printa ut kort med underkategorier när man klickar på undermeny
     function showSubCat() {
         alert($(this).text());
         //alert("test " + $(this).parents(".showMainCat").firstChild.nodeValue);
         //alert($(".showSubCat").index($(this).text()));
     }
 
+    //printa ut produkter på startsidan
+    fetch("json/produkter.json")
+    .then(function(response) {
+        return response.json();
+    })
+
+    .then(function(data) {
+        var products = data;
+          
+    
+       for (i = 0; i < products.length; i++) {
+        console.log("fungerar här med?");
+        
+        var productCard = "<div class='card'><img class='imgSmall' src='images/" + products[i].prodImage + "'><h3>" + products[i].prodName + "</h3><h3>" + products[i].prodDesc + "</h3><p>Pris: " + products[i].prodPrice + "</p><button>Köp nu</button></div>";
+
+        /*$(".mainCategory").text(mainCategories[i].mainCat);*/
+        //nedan: lade huvudkategorierna i ett kort 
+        /* var mainCategoryString = "<div class='card'><h2 class='mainCategory'>" +  mainCategories[i].mainCat + "</h2><ul id='" + mainCategories[i].id + "'></div>"; */
+        /* $(".flex").append(mainCategoryString); */
+        /* $(".nav").append(mainCategoryString); */
+
+        $(".flex").append(productCard);
+       } 
+    });
+    
 
 });

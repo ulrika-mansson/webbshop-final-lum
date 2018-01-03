@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "prodImage": "book_small.jpg",
         "prodName": "Böcker Kokbok Namn",
         "prodDesc": "Böcker Kokbok Beskrivning.",
         "prodPrice": 6999,
@@ -9,6 +10,7 @@
     },
     {
         "id": 2,
+        "prodImage": "book_small.jpg",
         "prodName": "Böcker Kattbok Namn",
         "prodDesc": "Böcker Kattbok Beskrivning.",
         "prodPrice": 6999,
@@ -16,6 +18,7 @@
         "subKat": 2
     },{
         "id": 3,
+        "prodImage": "book_small.jpg",
         "prodName": "Böcker Trädgård Namn",
         "prodDesc": "Böcker Trädgård Beskrivning.",
         "prodPrice": 6999,
@@ -24,6 +27,7 @@
     },
     {
         "id": 4,
+        "prodImage": "book_small.jpg",
         "prodName": "Böcker Barnbok Namn",
         "prodDesc": "Böcker Barnbok Beskrivning.",
         "prodPrice": 6999,
@@ -32,6 +36,7 @@
     },
     {
         "id": 5,
+        "prodImage": "cat_small.jpg",
         "prodName": "Katter Cornish Namn",
         "prodDesc": "Katter Cornish Beskrivning.",
         "prodPrice": 6999,
@@ -40,6 +45,7 @@
     },
     {
         "id": 6,
+        "prodImage": "cat_small.jpg",
         "prodName": "Katter Sphynx Namn",
         "prodDesc": "Katter Sphynx Beskrivning.",
         "prodPrice": 6999,
@@ -48,6 +54,7 @@
     },
     {
         "id": 7,
+        "prodImage": "cat_small.jpg",
         "prodName": "Katter Grå Namn",
         "prodDesc": "Katter Grå Beskrivning.",
         "prodPrice": 6999,
@@ -56,6 +63,7 @@
     },
     {
         "id": 8,
+        "prodImage": "cat_small.jpg",
         "prodName": "Katter Rum-Tum Namn",
         "prodDesc": "Katter Rum-Tum Beskrivning.",
         "prodPrice": 6999,
@@ -64,6 +72,7 @@
     },
     {
         "id": 9,
+        "prodImage": "yarn_small.png",
         "prodName": "Garn Ull Namn",
         "prodDesc": "Garn Ull Beskrivning.",
         "prodPrice": 6999,
@@ -72,6 +81,7 @@
     },
     {
         "id": 10,
+        "prodImage": "yarn_small.png",
         "prodName": "Garn Bomull Namn",
         "prodDesc": "Garn Bomul Beskrivning.",
         "prodPrice": 6999,
@@ -80,6 +90,7 @@
     },
     {
         "id": 11,
+        "prodImage": "yarn_small.png",
         "prodName": "Garn Något Namn",
         "prodDesc": "Garn Något Beskrivning.",
         "prodPrice": 6999,
@@ -88,6 +99,7 @@
     },
     {
         "id": 12,
+        "prodImage": "beer_small.jpg",
         "prodName": "Öl Lager Namn",
         "prodDesc": "Öl Lager Beskrivning.",
         "prodPrice": 6999,
@@ -96,6 +108,7 @@
     },
     {
         "id": 13,
+        "prodImage": "beer_small.jpg",
         "prodName": "Öl Pripps Namn",
         "prodDesc": "Öl Pripps Beskrivning.",
         "prodPrice": 6999,
@@ -104,6 +117,7 @@
     },
     {
         "id": 14,
+        "prodImage": "beer_small.jpg",
         "prodName": "Öl Paulaner Namn",
         "prodDesc": "Öl Paulaner Beskrivning.",
         "prodPrice": 6999,
@@ -112,6 +126,7 @@
     },
     {
         "id": 15,
+        "prodImage": "beer_small.jpg",
         "prodName": "Öl Julöl Namn",
         "prodDesc": "Öl Julöl Beskrivning.",
         "prodPrice": 6999,
@@ -120,6 +135,7 @@
     },
     {
         "id": 16,
+        "prodImage": "cat_small.jpg",
         "prodName": "Katter Cornish Namn",
         "prodDesc": "Katter Cornisk Beskrivning.",
         "prodPrice": 6999,
@@ -128,6 +144,7 @@
     },
     {
         "id": 17,
+        "prodImage": "cat_small.jpg",
         "prodName": "Katter Cornish Namn",
         "prodDesc": "Katter Cornish Beskrivning.",
         "prodPrice": 6999,
@@ -136,6 +153,7 @@
     },
     {
         "id": 18,
+        "prodImage": "cat_small.jpg",
         "prodName": "Katter Cornish Namn",
         "prodDesc": "Katter Cornish Beskrivning.",
         "prodPrice": 6999,
