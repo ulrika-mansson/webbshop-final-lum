@@ -108,11 +108,10 @@ header {
   flex-direction: row;
 } */
 
-/* .flex {
+.flex {
   width: 75%;
   display: flex;
-  flex-direction: row;
-  float: left; 
+  flex-wrap: wrap;
 }  
  */
 .card {
