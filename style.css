@@ -1,132 +1,156 @@
-* { 
-    box-sizing: border-box;
-  }
-  
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
 
 body {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    color: #222;
-    background: #f7f5f0;
-  }
-
-a {
-    text-decoration: none;
-    color: grey;
-  }
-
-a:hover {
-    text-decoration: underline;
-    color: #6633ff;
-  }
-
-.main-nav {
-    width: 100%;
-    background: black;
-    min-height: 30px;
-    padding: 10px;
-    position: fixed;
-    text-align: center;
-    /* text-decoration: none;
-    color: grey; */
-  }
-
-.nav {
-    display: flex;
-    justify-content: space-around;
-    font-weight: 700;
-    list-style-type: none;
-    margin: 0 auto;
-    padding: 0;
-    border: solid pink 1px;
-    text-decoration: none;
-    color: grey;
-  }
-
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
-/*huvudkategorierna från js-script*/
-.mainCat {
-  border: solid white 1px;
-}
-
-.subCatString {
-  display: none;
-  border: solid white 2px;
-}
- 
-.nav .name {
-    display: none;
-  } 
- 
-.nav li {
-    padding: 5px 10px 10px 10px;
-    border: 1px solid greenyellow;
-  }
-
-.nav li:hover ul {
-  display: block;
-  
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+	margin: 0;
+	padding: 0;
+	background: #f7f5f0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 ul {
-  list-style-type: none;
-  
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-/*för listor i listor i nav*/
-.nav li ul {
-  position: absolute;
-  background-color: black;
-  padding-left: 0;
-  text-align: left;
-  list-style-type: none; 
+p {
+	font-size: .95em;
 }
-.nav a:hover {
-      color: grey;
-  }
 
-header {
-    text-align: center;
-    background: url('images/seamless-hipster.jpg') no-repeat top center ;
-    background-size: cover;
-    overflow: hidden;
-    padding-top: 60px;
-    line-height: 1.5;
-  }
+h2,
+h3,
+a {
+	color: #093a58;
+}
+
+h2,
+h3 {
+	margin-top: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+	font-size: 1.35em;
+		margin: 0;
+}
+
+.main-nav {
+	margin-top: 5px;
+	
+}
+
+.name a,
+.main-nav a {
+	text-align: center;
+	display: block;
+	padding: 10px 15px;
+}
+
+.name a,
+.main-nav a {
+	text-align: center;
+	display: block;
+	padding: 10px 15px;
+}
+
+.main-nav a {
+	font-size: .95em;
+	color: grey;
+	text-transform: uppercase;
+}
+
+.main-nav a:hover {
+	color: #093a58;
+}
+
+/* ---- Layout Containers ---- */
+main {
+	margin: 100px;
+}
+
+.main-header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	position: fixed;
+	top: 0;
+	background: #f7f5f0;
+	/*width: 100%; */
+}
+
+.banner,
+.main-footer {
+	text-align: center;
+}
+
+.banner {
+	/* background: url('img/seamless-hipster.jpg') no-repeat top center; */
+	background: #3acec2; 
+	padding: 1.8em 0;
+	margin-bottom: 32px;
+	height: 200px;
+	padding-top: 60px;
+	margin-top: 100px;
+} 
+
+.main-footer {
+	background: #d9e4ea;
+	padding: 2em 0;
+	margin-top: 30px;
+}
+
+/* ---- Page Elements ---- */
+
+.headline {
+	margin-bottom: 0;
+}
 
 .flex {
-  width: 75%;
-  display: flex;
-  flex-wrap: wrap;
-}  
+	width: 75%;
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+	margin-top: 100px;
+}
 
+/* ---- Card Elements ---- */
 .card {
     margin: 30px;
     padding: 20px 40px 40px;
-    max-width: 500px;
+    max-width: 300px;
     text-align: left;
     background: #fff;
     border-bottom: 4px solid #ccc;
     border-radius: 6px;
     flex: 1 200px;
-  }
+}
 
-  .card h2 {
+.card h2 {
     font-family: "Roboto";
-  }
+}
 
-  .card:hover {
+.card:hover {
     border-color: black;
-  }
+}
 
 .button {
     background-color: #4CAF50;
@@ -139,84 +163,88 @@ header {
     font-size: 16px;
 }    
 
-  footer {
-    width: 100%;
-    min-height: 30px;
-    padding: 20px 0 40px 20px;
-  }
+/*--- CSS for script ----*/
+.showMainCat {
+	margin-right: auto;
+	color: white;
+}
   
-  footer .copyright {
-    top: -8px;
-    margin-right: 20px;
-    font-size: .75em;
-  }
-
-  footer ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
+.mainCat {
+	border: solid white 1px;
+}
   
-  footer ul li {
-    display: inline-block;
-  }
-  
-  
-  /* Styles for larger screens */
-  @media screen and (min-width: 720px) {
-    
-    .flex {
-        display: flex;
-        max-width: 1200px;
-        justify-content: space-around;
-        margin: 0 auto;
-    }
-
-
-header {
-    min-height: 450px;
-  }
-
-  .nav {
-    max-width: 1200px;
-  }
-
-  .nav .name {
-    display: block;
-    margin-right: auto;
-    color: white;
-  }
-  
-  .showMainCat {
-    margin-right: auto;
-    color: white;
-  }
-
-  main {
-    padding-top: 50px;
-    
-  }
-
-  main p {
-    line-height: 1.6em;
-  }
-
-  footer {
-    font-size: 1.3em;
-    max-width: 1200px;
-    margin: 40px auto;
-  }
-
+.subCatString {
+	display: none;
+	border: solid white 2px;
 }
 
-h3 {
-    color: maroon;
-    letter-spacing: .5px;
+#navShowMainCat {
+	display: flex;
+	justify-content: space-around;
+	
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 0;
+	
+	text-decoration: none;
+	color: grey;
 }
 
-.card-title {
-    text-align: center;
-    border: solid black 3px;
-    border-radius: 10px;
-    margin-top: 50px;
+#navShowMainCat li {
+	padding: 5px 10px 10px 10px;
+}
+	
+#navShowMainCat li:hover ul {
+	  display: block;
+}
+
+#navShowMainCat li ul {
+	position: absolute;
+	background-color: #fff;
+	padding-left: 0;
+	text-align: left;
+	list-style-type: none; 
+}
+
+#navShowMainCat a:hover {
+		color: grey;
+}
+  
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+	.main-header {
+		width: 80%;
+		margin: 0 auto;
+		max-width: 1150px;
+	}
+	.tagline {
+		font-size: 1.4em;
+	}
+}
+
+@media (min-width: 769px) {
+
+	.main-header,
+	.main-nav {
+		display: flex;
+		
+	}
+	.main-header {
+		flex-direction: column;
+		align-items: center;
+		
+	}
+}
+
+@media (min-width: 1025px) {
+	
+	.main-header {
+		flex-direction: row;
+		justify-content: space-between;
+		
+	}
 }

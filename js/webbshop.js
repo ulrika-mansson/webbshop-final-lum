@@ -2,7 +2,7 @@ $(document).ready(function() {
     console.log("fungerar?");
         
     
-    //printa ut huvudkategorier i menyer
+    //fetch för att hämta huvudkategorier från json
     fetch("json/huvudkategorier.json")
     .then(function(response) {
         return response.json();
@@ -13,26 +13,35 @@ $(document).ready(function() {
        // console.log(mainCategories);
     
     
-       for (i = 0; i < mainCategories.length; i++) {
+       for (i = mainCategories.length-1; i >= 0; i--) {
         console.log("fungerar här med?");
         console.log("id: " + mainCategories[i].id);
         console.log("mainCat: " + mainCategories[i].mainCat);
         
-        /*$(".mainCategory").text(mainCategories[i].mainCat);*/
-        //nedan: lade huvudkategorierna i ett kort 
-        /* var mainCategoryString = "<div class='card'><h2 class='mainCategory'>" +  mainCategories[i].mainCat + "</h2><ul id='" + mainCategories[i].id + "'></div>"; */
-         var mainCategoryString = "<li class='showMainCat'><a href='#'>" + mainCategories[i].mainCat + "</a><ul class='subCatString' id='" + mainCategories[i].id + "'></ul></li>";
+        //bygg ul och printa ut huvudkategorer i div med id showMainCat i nav
+        
+        var a = document.createElement('a');
+        a.setAttribute("href", "#");
+        a.innerHTML = mainCategories[i].mainCat;
+        var ul = document.createElement('ul');
+        ul.className = 'subCatString';
+        ul.id = mainCategories[i].id;
+        var li = document.createElement('li');
+        li.className = 'showMainCat';
 
-        console.log(mainCategoryString);
-        /* $(".flex").append(mainCategoryString); */
-        /* $(".nav").append(mainCategoryString); */
-        $("#navShowMainCat").append(mainCategoryString);
+        li.appendChild(a);
+        li.appendChild(ul);
+
+        $("#navShowMainCat").prepend(li);
+        a.onclick = showMainCat;
     }
     
+    populateSubCategories();
 
-        
-    });
+});
 
+    function populateSubCategories() {
+    //fetch för att hämta underkategorier från json
      fetch("json/underkategorier.json")
     .then(function(response) {
         return response.json();
@@ -43,7 +52,7 @@ $(document).ready(function() {
         console.log(subCategories);
 
         for (i = 0; i < subCategories.length; i++) {
-        //console.log("fungerar här med?");
+        console.log("subcat fungerar här med?");
         //console.log("id: " + subCategories[i].id);
         //console.log("subCat: " + subCategories[i].subCat);
         //console.log("huvudkategori: " + subCategories[i].huvudkategori);
@@ -56,8 +65,14 @@ $(document).ready(function() {
         }
     });
    
+}
 
-    //funktion för att printa ut kort med underkategorier när man klickar på undermeny
+    //funktion för att ta fram info om vilken huvudkategori man klickar på
+    function showMainCat() {
+        var main = ($(this).next().attr("id"));
+        printProducts(main, 0);
+    }
+
     function showSubCat() {
         var mainSub = ($(this).attr("id")).split("_");
         printProducts(mainSub[0], mainSub[1]);
@@ -73,10 +88,15 @@ $(document).ready(function() {
 
     //printa ut kort produkter på startsidan
     function printProducts(main, sub) {
-        //töm div
-        alert(main);
-        alert(sub);
+        //radera flex så att inte nya produkter listas bredvid
+        //skapa sedan flex igen
+        //innebär att flex raderas varje gång man trycker på huvudkategori
+        $(".flex").remove();
+        var flex = document.createElement("div");
+        flex.className = "flex";
+        $("main").append(flex);
 
+    
     fetch("json/produkter.json")
     .then(function(response) {
         return response.json();
@@ -89,17 +109,24 @@ $(document).ready(function() {
        for (i = 0; i < products.length; i++) {
         console.log("fungerar här med?");
         
-        if (products[i].mainCat == main && products[i].subKat == sub) {
+        if ((products[i].mainCat == main && products[i].subKat == sub) 
+        || (products[i].mainCat == main && 0 == sub)
+        || (0 == main && 0 == sub)) 
+            {
 
                  
         var div = document.createElement('div');
             div.className = 'card';
-            div.innerHTML = '<img class="imgSmall" src="images/' + products[i].prodImage + '"><h3>' + products[i].prodName + '</h3><h4>' + products[i].prodDesc + '</h4><p>Pris: ' + products[i].prodPrice + '</p><button class="button">Köp nu</button>';
+            div.innerHTML = '<img class="imgSmall" src="images/' + products[i].prodImage + '"><h3>' + products[i].prodName + '</h3><h4>' + products[i].prodDesc + '</h4><p>Pris: ' + products[i].prodPrice + '</p><button class="button" onclick="addToChart()">Köp nu</button>';
             
              $(".flex").append(div);
     };
        } 
     });
 }
-
+        
 });
+
+function addToChart() {
+    console.log("addToChart");
+}
