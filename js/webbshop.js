@@ -1,5 +1,6 @@
 $(document).ready(function() {
     console.log("fungerar?");
+    var numberOfAddedProducts = 0;
         
     
     //fetch för att hämta huvudkategorier från json
@@ -117,16 +118,32 @@ $(document).ready(function() {
                  
         var div = document.createElement('div');
             div.className = 'card';
-            div.innerHTML = '<img class="imgSmall" src="images/' + products[i].prodImage + '"><h3>' + products[i].prodName + '</h3><h4>' + products[i].prodDesc + '</h4><p>Pris: ' + products[i].prodPrice + '</p><button class="button" onclick="addToChart()">Köp nu</button>';
+            div.id = products[i].id;
+            div.innerHTML = '<img class="imgSmall" src="images/' + products[i].prodImage + '"><h3>' + products[i].prodName + '</h3><h4>' + products[i].prodDesc + '</h4><p>Pris: ' + products[i].prodPrice + '</p><button class="button" onclick="addToChart()"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Köp nu</button>';
             
              $(".flex").append(div);
     };
        } 
     });
 }
-        
+
+
+
+
 });
+var numberOfAddedProducts = 0;
+var productCartArray = [];
+
 
 function addToChart() {
     console.log("addToChart");
+    //console.log("id: " + $(this).parent().closest('div').prop('nodeName'));
+    //console.log("id: " + this.parentNode.id);
+    //console.log("id: " + $(this).parent().attr("id"));
+    numberOfAddedProducts += 1;
+    console.log(numberOfAddedProducts);
+    var counter = document.getElementById("counter");
+    counter.innerText = numberOfAddedProducts;
+    document.getElementById("counter").innerText = numberOfAddedProducts;
+
 }
