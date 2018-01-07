@@ -155,7 +155,6 @@ function addToChart() {
 function logginModal() {
     console.log("logginModal");
     
-    
     var content, title = 'Logga in';
     content  = '<form><label>Användarnamn</label>';
     content += '<input id="username" type="text" />';
@@ -163,5 +162,19 @@ function logginModal() {
     content += '<input id="password" type="password" />';
     content += '<div class="button" onclick="signIn()">Logga in</div><form>';
     showModal(title, content);
-    
-} 
+    console.log(content);
+     
+ }
+ 
+ var showModal = function(title, content) {
+    var html;
+    closeModal();
+    html  = '<div class="modal"><div class="mcontent">';
+    html += '<div class="mtitle">'+title+'<i class="fa fa-times" onclick="closeModal()"></i></div>';
+    html += '<div class="mhtml">'+content+'</div></div></div>';
+    $('main').prepend(html);
+};
+
+var closeModal = function(){ $('.modal').remove(); };
+
+
