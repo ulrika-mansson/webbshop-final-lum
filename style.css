@@ -83,6 +83,59 @@ a {
 	color: #093a58;
 }
 
+/* modal */
+.modal {
+	position: fixed; 
+	display: flex;
+	width: 100%; 
+	height: 100vh; 
+	z-index: 101;
+    background-color: rgba(0, 0, 0, 0.1); 
+    justify-content: center;
+    align-items: center;
+}
+
+.mcontent {
+	flex: 1;
+	border-radius: 3px; 
+	max-width: 360px;
+	padding: 5px;
+    background-color: #d9e4ea;
+}
+
+.mtitle {
+    color: #fff; cursor: default;
+    padding: 0px 5px 5px 5px; 
+}
+
+.mtitle i { 
+	float: right;
+	cursor: pointer;
+	transition: 0.25s;
+	font-size: 1.25em;
+}
+
+.mtitle i:hover {
+	transition: 0.25s;
+	color: #777;
+}
+
+
+.mhtml {
+	width: 100%;
+	background-color: #fff;
+	min-height: 100px;
+	padding: 10px;
+    font-size: 0.9em;
+}
+
+.mhtml p {
+    margin: 0px;
+    color: #1616ca;
+    padding-bottom: 10px;
+}
+
+
 /* ---- Layout Containers ---- */
 main {
 	margin: 100px;

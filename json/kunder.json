@@ -1,19 +1,19 @@
 [
     {
         "id": 1,
-        "email": "ulrika@ulrika.se",
+        "email": "ulrika@ulrika.com",
         "password": "ulrika"
     },{
         "id": 2,
-        "countryname": "ellen@ellen.com",
+        "email": "ellen@ellen.com",
         "password": "ellen"
     },{
         "id": 3,
-        "countryname": "bosse@bosse.com",
+        "email": "bosse@bosse.com",
         "password": "bosse"
     },{
         "id": 4,
-        "countryname": "rex@rex.com",
+        "email": "rex@rex.com",
         "password": "rex"
     }
 ]

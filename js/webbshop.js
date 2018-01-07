@@ -1,8 +1,11 @@
 $(document).ready(function() {
     console.log("fungerar?");
     var numberOfAddedProducts = 0;
-        
     
+    //inloggning     
+    
+    
+
     //fetch för att hämta huvudkategorier från json
     fetch("json/huvudkategorier.json")
     .then(function(response) {
@@ -119,16 +122,13 @@ $(document).ready(function() {
         var div = document.createElement('div');
             div.className = 'card';
             div.id = products[i].id;
-            div.innerHTML = '<img class="imgSmall" src="images/' + products[i].prodImage + '"><h3>' + products[i].prodName + '</h3><h4>' + products[i].prodDesc + '</h4><p>Pris: ' + products[i].prodPrice + '</p><button class="button" onclick="addToChart()"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Köp nu</button>';
+            div.innerHTML = '<img class="imgSmall" src="images/' + products[i].prodImage + '"><h3>' + products[i].prodName + '</h3><h4>' + products[i].prodDesc + '</h4><p>Pris: ' + products[i].prodPrice + '</p><button class="button" onclick="addToCart()"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Köp nu</button>';
             
              $(".flex").append(div);
-    };
+    }
        } 
     });
 }
-
-
-
 
 });
 
@@ -137,8 +137,8 @@ var numberOfAddedProducts = 0;
 var productCartArray = [];
 
 
-function addToChart() {
-    console.log("addToChart");
+function addToCart() {
+    console.log("addToCart");
     //console.log("id: " + $(this).parent().closest('div').prop('nodeName'));
     //console.log("id: " + this.parentNode.id);
     //console.log("id: " + $(this).parent().attr("id"));
@@ -157,11 +157,52 @@ function logginModal() {
     
     
     var content, title = 'Logga in';
-    content  = '<form><label>Användarnamn</label>';
-    content += '<input id="username" type="text" />';
+    content  = '<form><label>E-post</label>';
+    content += '<input id="email" type="text" />';
     content += '<label>Lösenord</label>';
     content += '<input id="password" type="password" />';
-    content += '<div class="button" onclick="signIn()">Logga in</div><form>';
+    content += '<div class="button" onclick="signIn()">Logga in</div></form>';
     showModal(title, content);
-    
+    console.log(content);
 } 
+
+var showModal = function(title, content) {
+    var html;
+    closeModal();
+
+    html = '<div class="modal"><div class="mcontent">';
+    html += '<div class="mtitle">' + title + '<i class="fa fa-times" onclick="closeModal()"></i></div>';
+    html += '<div class="mhtml">' + content + '</div></div></div>';
+    $('main').prepend(html);
+}
+
+var closeModal = function() {
+    $('.modal').remove();
+}
+
+function signIn() {
+    var email = $("#email").val();
+    var password = $("#password").val();
+
+    fetch("json/kunder.json")
+    .then(function(response) {
+        return response.json();
+    })
+
+    .then(function(data) {
+        var users = data;
+        var incorrectLogin = true;
+
+        for (i = 0; i < users.length; i++) {
+        if (email === users[i].email && password === users[i].password) {
+            closeModal();
+            incorrectLogin = false;
+        }
+        }
+        if(incorrectLogin)
+        {
+            var html = "Felaktigt användarnamn eller lösenord. Försök igen.";            
+            $("Form")[0].append(html);    
+        }
+    });
+}
