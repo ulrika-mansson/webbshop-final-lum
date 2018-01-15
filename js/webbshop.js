@@ -2,10 +2,6 @@ $(document).ready(function() {
     console.log("fungerar?");
     var numberOfAddedProducts = 0;
     
-    //inloggning     
-    
-    
-
     //fetch för att hämta huvudkategorier från json
     fetch("json/huvudkategorier.json")
     .then(function(response) {
