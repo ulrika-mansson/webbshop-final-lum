@@ -4,6 +4,7 @@
         "prodImage": "book_small.jpg",
         "prodName": "Kokbok",
         "prodDesc": "Bok om mat.",
+        "longDesc": "LongDescription",
         "prodPrice": 299,
         "mainCat": 1,
         "subKat": 1
@@ -13,6 +14,7 @@
         "prodImage": "book_small.jpg",
         "prodName": "Kattbok",
         "prodDesc": "Bok om katter.",
+        "longDesc": "LongDescription",
         "prodPrice": 399,
         "mainCat": 1,
         "subKat": 2
@@ -21,6 +23,7 @@
         "prodImage": "book_small.jpg",
         "prodName": "Trädgårdsbok",
         "prodDesc": "Bok om trädgård.",
+        "longDesc": "LongDescription",
         "prodPrice": 199,
         "mainCat": 1,
         "subKat": 3
@@ -30,6 +33,7 @@
         "prodImage": "book_small.jpg",
         "prodName": "Barnbok",
         "prodDesc": "Bok för barn.",
+        "longDesc": "LongDescription",
         "prodPrice": 249,
         "mainCat": 1,
         "subKat": 4
@@ -39,6 +43,7 @@
         "prodImage": "cat_small.jpg",
         "prodName": "Cornish Rex",
         "prodDesc": "Krullkatt.",
+        "longDesc": "LongDescription",
         "prodPrice": 12999,
         "mainCat": 2,
         "subKat": 5
@@ -48,6 +53,7 @@
         "prodImage": "cat_small.jpg",
         "prodName": "Sphynx",
         "prodDesc": "Naken katt.",
+        "longDesc": "LongDescription",
         "prodPrice": 15999,
         "mainCat": 2,
         "subKat": 6
@@ -57,6 +63,7 @@
         "prodImage": "cat_small.jpg",
         "prodName": "Huskatt",
         "prodDesc": "Sån som mormor hade.",
+        "longDesc": "LongDescription",
         "prodPrice": 699,
         "mainCat": 2,
         "subKat": 7
@@ -66,6 +73,7 @@
         "prodImage": "cat_small.jpg",
         "prodName": "Rum-Tum-Tum",
         "prodDesc": "Som TS Eliot hade.",
+        "longDesc": "LongDescription",
         "prodPrice": 6999,
         "mainCat": 2,
         "subKat": 8
@@ -75,6 +83,7 @@
         "prodImage": "yarn_small.jpg",
         "prodName": "Ullgarn",
         "prodDesc": "Som klias.",
+        "longDesc": "LongDescription",
         "prodPrice": 69,
         "mainCat": 3,
         "subKat": 9
@@ -84,6 +93,7 @@
         "prodImage": "yarn_small.jpg",
         "prodName": "Bomullsgarn",
         "prodDesc": "Vanligt.",
+        "longDesc": "LongDescription",
         "prodPrice": 49,
         "mainCat": 3,
         "subKat": 10
@@ -93,6 +103,7 @@
         "prodImage": "yarn_small.jpg",
         "prodName": "Lucky Alpacka",
         "prodDesc": "Från djur som spottas.",
+        "longDesc": "LongDescription",
         "prodPrice": 199,
         "mainCat": 3,
         "subKat": 11
@@ -102,6 +113,7 @@
         "prodImage": "beer_small.jpg",
         "prodName": "Berliner Kindl",
         "prodDesc": "Som i Berlin.",
+        "longDesc": "LongDescription",
         "prodPrice": 69,
         "mainCat": 4,
         "subKat": 13
@@ -111,6 +123,7 @@
         "prodImage": "beer_small.jpg",
         "prodName": "Pripps",
         "prodDesc": "Blå.",
+        "longDesc": "Long description of product Pripps with short description 'Blå'",
         "prodPrice": 49,
         "mainCat": 4,
         "subKat": 14
@@ -120,6 +133,7 @@
         "prodImage": "beer_small.jpg",
         "prodName": "Paulaner",
         "prodDesc": "Som i München.",
+        "longDesc": "LongDescription",
         "prodPrice": 59,
         "mainCat": 4,
         "subKat": 15
@@ -129,6 +143,7 @@
         "prodImage": "beer_small.jpg",
         "prodName": "Julöl",
         "prodDesc": "På julen.",
+        "longDesc": "LongDescription",
         "prodPrice": 49,
         "mainCat": 4,
         "subKat": 16
@@ -138,6 +153,7 @@
         "prodImage": "cat_small.jpg",
         "prodName": "Cornish Rex 2",
         "prodDesc": "En krullis till.",
+        "longDesc": "LongDescription",
         "prodPrice": 6999,
         "mainCat": 2,
         "subKat": 5
@@ -147,6 +163,7 @@
         "prodImage": "cat_small.jpg",
         "prodName": "Cornish Rex 3",
         "prodDesc": "Ännu en krullis.",
+        "longDesc": "LongDescription",
         "prodPrice": 6999,
         "mainCat": 2,
         "subKat": 5
@@ -156,6 +173,7 @@
         "prodImage": "cat_small.jpg",
         "prodName": "Cornish Rex 4",
         "prodDesc": "Och en sista.",
+        "longDesc": "LongDescription",
         "prodPrice": 6999,
         "mainCat": 2,
         "subKat": 5
@@ -165,6 +183,7 @@
         "prodImage": "yarn_small.jpg",
         "prodName": "Gosig kanin",
         "prodDesc": "Mjukt som Pelle Plutt.",
+        "longDesc": "LongDescription",
         "prodPrice": 69,
         "mainCat": 3,
         "subKat": 12

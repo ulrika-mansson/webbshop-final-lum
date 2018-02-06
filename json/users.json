@@ -1,0 +1,9 @@
+{
+    "faroch": {"name": "Faroch Mehri", "password": "faroch"},
+    "ulrika": {"name": "Ulrika Månsson", "password": "ulrika"},
+    "anders": {"name": "Anders Hagelkvist", "password": "anders"}, 
+    "emil"  : {"name": "Emil Wärdig Tsoukalas", "password": "emil"},
+    "joel"  : {"name": "Joel Månesköld", "password": "joel"},
+    "janne": { "name": "Janne Kemi", "password": "janne" },
+    "admin": { "name": "admin", "password": "admin"}
+}

@@ -9,6 +9,15 @@
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round|Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css">
 </head>
+    <script src="js/webbshop.js"></script>
+	<script>
+		function goToCart() {
+		if(sessionStorage.cart)
+		{
+			window.location.href = "cart.html";
+		}
+	}
+</script>
 
 <body>
     
@@ -20,10 +29,18 @@
             <li><a href="#">Katter</a></li>
             <li><a href="#">Garn</a></li>
             <li><a href="#">Öl</a></li> -->
+<<<<<<< HEAD
+            <li><a href="info.html">Info</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a class="logState" href="#">Logga in</a></li>
+            <li onclick="goToCart()"><a href="#"><span id="counter">0</span><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a></li>
+        </ul> 
+=======
             <li><a href="#">Kontakt</a></li>
             <li><a href="#" onclick="logginModal()">Logga in</a></li>
             <li><a href="#"><span id="counter">0</span><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a></li>
         </ul>
+>>>>>>> 636b03204fddc992402a0684c23552848d28b436
     </header>
 
 
@@ -82,6 +99,5 @@
 
     </footer>
 
-    <script src="js/webbshop.js"></script>
 </body>
 </html>

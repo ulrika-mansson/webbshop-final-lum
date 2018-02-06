@@ -3,19 +3,50 @@
 ==================================== */
 
 * {
-	box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+html {
+    -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%;
+    -webkit-overflow-scrolling : touch !important;
+    touch-action: manipulation;
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
-	line-height: 1.6;
-	color: #3a3a3a;
-	margin: 0;
-	padding: 0;
-	background: #f7f5f0;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
+    margin: 0px; padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em; line-height: 1.5; color: #555;
+    background-color: #f9f9f9;
+}
+
+*, *:focus, *:hover {
+    outline: 0;	outline: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.center { text-align: center; }
+
+input, select {
+    font-family: 'Roboto', sans-serif;
+    width: 100%; height: 30px; text-indent: 5px;
+    margin-bottom: 10px; border: 1px #ccc solid;
+    border-radius: 3px; margin-top: 3px;
+    font-size: 0.9rem;
+}
+
+.button2 {
+    text-align: center; margin: 5px auto;
+    height: 35px; line-height: 35px; width: 50%; transition: 0.25s;
+    background-color: #2196f3; font-size: 1.2em; padding: 0px 10px;
+    cursor: pointer; color: #fff; border-radius: 3px;
+}
+
+.button2:hover {
+    transition: 0.25s;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
 }
 
 ul {
@@ -25,7 +56,6 @@ ul {
 }
 
 p {
-	font-size: .95em;
 }
 
 h2,
@@ -138,6 +168,7 @@ a {
 
 /* ---- Layout Containers ---- */
 main {
+	padding: 2em 0;
 	margin: 100px;
 }
 
@@ -185,6 +216,109 @@ main {
 	margin-top: 100px;
 }
 
+.cart-tab {
+  display: flex;       
+  flex-direction: row;
+  flex-grow: 0;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-bottom: 2px solid #e0e0e0;
+  border-collapse: collapse;
+  padding-top: 5px;
+}
+
+.cart-tab.header {
+  background-color: #FFEEDB;
+  font-weight: bold;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.text {
+	
+  flex-grow: 1;            
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-right: 20px;
+  width: 180px;
+
+}
+
+.num {
+	width: 80px;
+	text-align: right;
+}
+
+.button {
+	float: right;
+	margin-top: 5px;
+}
+
+#message div {
+    display: none;
+    cursor: default;
+    font-size: 0.9em;
+    border-radius: 3px;
+    width: 100%; height: 40px;
+    line-height: 40px; text-align: center;
+}
+
+.error {
+    background-color: #fb9696;
+    color: #962c2c;
+}
+
+.success {
+    background-color: #9fca93;
+    color: #5d8044;
+}
+
+
+.modal {
+    position: fixed; 
+	top: 0;
+	left: 0;
+	display: flex;
+    width: 100%; height: 100vh; z-index: 101;
+    background-color: rgba(0, 0, 0, 0.1); 
+    justify-content: center;
+    align-items: center;
+}
+
+.mcontent {
+    flex: 1; border-radius: 3px; 
+    max-width: 360px; padding: 5px;
+    background-color: #2196f3;
+}
+
+.mtitle {
+    color: #fff; cursor: default;
+    padding: 0px 5px 5px 5px; 
+}
+.mtitle i { float: right; cursor: pointer; transition: 0.25s; font-size: 1.25em; }
+.mtitle i:hover { transition: 0.25s; color: #777; }
+
+.mhtml {
+    width: 100%; background-color: #fff;
+    min-height: 100px; padding: 10px;
+    font-size: 0.9em;
+}
+
+.mhtml p {
+    margin: 0px;
+    color: #1616ca;
+    padding-bottom: 10px;
+}
+
+.createAccount {
+	text-decoration: underline;
+}
+
+
+
 /* ---- Card Elements ---- */
 .card {
     margin: 30px;
@@ -205,6 +339,27 @@ main {
     border-color: black;
 }
 
+/* ---- Page Elements ---- */
+.page {
+	display: absolute;
+    margin: 30px;
+    padding: 20px 40px 40px;
+    max-width: 900px;
+    text-align: left;
+    background: #fff;
+    border-bottom: 4px solid #ccc;
+    border-radius: 6px;
+/*     flex: 1 200px;
+ */}
+
+.page h2 {
+    font-family: "Roboto";
+}
+
+.page:hover {
+    border-color: black;
+}
+
 .button {
     background-color: #4CAF50;
     border: none;
@@ -215,6 +370,8 @@ main {
     display: inline-block;
     font-size: 16px;
 }    
+
+
 
 /*--- CSS for script ----*/
 .showMainCat {
@@ -270,7 +427,7 @@ main {
 
 @media (min-width: 769px) {
 	.main-header {
-		width: 80%;
+		width: 100%;
 		margin: 0 auto;
 		max-width: 1150px;
 	}
